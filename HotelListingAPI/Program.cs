@@ -1,14 +1,23 @@
 // Singleton : es un ejh de patron
 // builder (se dice bilder)
 // builder es una variable que representa la instancia de una clase
-
 using Serilog;
+using Microsoft.EntityFrameworkCore;
+using HotelListing.API.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // contenedor de servicios
 // @sonarqube => Correciones de código
+
+// Esto es el contenedor de servicios
+
+var connectionString= 
+builder.Configuration.GetConnectionString("HotelListingDbConnection");
+builder.Services.AddDbContext<HotelListingDbContext>(options => {
+    options.UseSqlServer(connectionString);
+});
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
