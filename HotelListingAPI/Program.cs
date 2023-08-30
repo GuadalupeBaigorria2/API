@@ -4,6 +4,7 @@
 using Serilog;
 using Microsoft.EntityFrameworkCore;
 using HotelListing.API.Data;
+using HotelListing.API.Configurations;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,9 +14,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Esto es el contenedor de servicios
 
-var connectionString= 
+var connectionString =
 builder.Configuration.GetConnectionString("HotelListingDbConnection");
-builder.Services.AddDbContext<HotelListingDbContext>(options => {
+builder.Services.AddDbContext<HotelListingDbContext>(options =>
+{
     options.UseSqlServer(connectionString);
 });
 
@@ -41,8 +43,10 @@ builder.Services.AddCors(options =>
 //       "Microsoft.AspNetCore": "Warning"
 //     }
 //   },
-builder.Host.UseSerilog((ctx, lc) => 
+builder.Host.UseSerilog((ctx, lc) =>
 lc.WriteTo.Console().ReadFrom.Configuration(ctx.Configuration));
+
+builder.Services.AddAutoMapper(typeof(MapperConfig));
 
 var app = builder.Build();
 
@@ -50,14 +54,30 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+   app.UseSwagger();
+
+   app.UseSwaggerUI(options =>
+    {
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
+        options.RoutePrefix = string.Empty;
+    });
+
+    // app.UseSwaggerUI(c =>
+    // {
+    //     c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+    //     c.RoutePrefix = "";
+    // });
+
+    // app.UseSwaggerUI();
 }
+
 
 app.UseHttpsRedirection();
 
 
 app.UseCors("AllowAll");
+
+app.UseStaticFiles();
 
 app.UseAuthorization();
 

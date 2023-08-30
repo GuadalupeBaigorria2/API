@@ -1,0 +1,25 @@
+2023-08-10 21:39:14.941 -03:00 [INF] Now listening on: https://localhost:7172
+2023-08-10 21:39:15.011 -03:00 [INF] Now listening on: http://localhost:5054
+2023-08-10 21:39:15.017 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-10 21:39:15.018 -03:00 [INF] Hosting environment: Development
+2023-08-10 21:39:15.018 -03:00 [INF] Content root path: C:\Users\Guada\Documents\Estudio\API\HotelListingAPI
+2023-08-10 21:49:40.572 -03:00 [INF] Now listening on: https://localhost:7172
+2023-08-10 21:49:40.634 -03:00 [INF] Now listening on: http://localhost:5054
+2023-08-10 21:49:40.641 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-10 21:49:40.643 -03:00 [INF] Hosting environment: Development
+2023-08-10 21:49:40.643 -03:00 [INF] Content root path: C:\Users\Guada\Documents\Estudio\API\HotelListingAPI
+2023-08-10 21:58:40.151 -03:00 [INF] Now listening on: https://localhost:7172
+2023-08-10 21:58:40.207 -03:00 [INF] Now listening on: http://localhost:5054
+2023-08-10 21:58:40.213 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-10 21:58:40.214 -03:00 [INF] Hosting environment: Development
+2023-08-10 21:58:40.214 -03:00 [INF] Content root path: C:\Users\Guada\Documents\Estudio\API\HotelListingAPI
+2023-08-10 21:59:27.800 -03:00 [INF] Now listening on: https://localhost:7172
+2023-08-10 21:59:27.854 -03:00 [INF] Now listening on: http://localhost:5054
+2023-08-10 21:59:27.859 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-10 21:59:27.861 -03:00 [INF] Hosting environment: Development
+2023-08-10 21:59:27.864 -03:00 [INF] Content root path: C:\Users\Guada\Documents\Estudio\API\HotelListingAPI
+2023-08-10 22:06:00.403 -03:00 [INF] Now listening on: https://localhost:7172
+2023-08-10 22:06:00.487 -03:00 [INF] Now listening on: http://localhost:5054
+2023-08-10 22:06:00.491 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-10 22:06:00.496 -03:00 [INF] Hosting environment: Development
+2023-08-10 22:06:00.496 -03:00 [INF] Content root path: C:\Users\Guada\Documents\Estudio\API\HotelListingAPI
