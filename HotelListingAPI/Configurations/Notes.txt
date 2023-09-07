@@ -1,0 +1,74 @@
+Visual Code crear proyecto
+PS C:\Users\Guada\Documents\Estudio\API> dotnet new webapi -n HotelListingAPI
+La plantilla "ASP.NET Core Web API" se creó correctamente.
+
+et con este nombre en PATH.
+PS C:\Users\Guada\Documents\Estudio\API> dotnet ef migrations add Initial
+No se pudo ejecutar porque no se encontró el comando o el archivo especificado.
+Algunas de las posibles causas son :
+  * Escribió mal un comando dotnet integrado.
+  * Pretendía ejecutar un programa .NET, pero dotnet-ef no existe.
+  * Pretendía ejecutar una herramienta global, pero no se encontró ningún ejecutable con prefijo dotnet con este nombre en PATH.
+PS C:\Users\Guada\Documents\Estudio\API> dotnet ef --help               
+  * Pretendía ejecutar una herramienta global, pero no se encontró ningún ejecutable con prefijo dotn
+
+PS C:\Users\Guada\Documents\Estudio\API> dotnet ef migrations add InitialMigration
+No project was found. Change the current working directory or use the --project option.
+PS C:\Users\Guada\Documents\Estudio\API> cd HotelListingAPI
+PS C:\Users\Guada\Documents\Estudio\API\HotelListingAPI> dotnet ef migrations add InitialMigration
+Build started...
+Build succeeded.
+Done. To undo this action, use 'ef migrations remove'
+PS C:\Users\Guada\Documents\Estudio\API\HotelListingAPI> dotnet ef database update
+
+
+
+Microsoft.VisualStudio.Web.CodeGeneration.Design
+Esteban Araujo20:44
+enable-migrations -contexttypename ApplicationDbContext
+Esteban Araujo20:47
+dotnet ef migrations add Initial
+
+dotnet ef database update
+Esteban Araujo20:51
+dotnet tool install --global dotnet-ef
+
+
+https://stackoverflow.com/questions/61860016/how-to-use-scaffold-dbcontext-command-in-vs-code
+
+Desde <https://meet.google.com/zyb-tbuj-uvy> 
+
+dotnet ef dbcontext scaffold "HotelListingDbConnection" Microsoft.EntityFrameworkCore.SqlServer -o Models
+
+Desde <https://stackoverflow.com/questions/61860016/how-to-use-scaffold-dbcontext-command-in-vs-code> 
+
+
+dotnet ef aspnet-codegenerator controller -name CountriesController --relativeFolderPath Controllers --useDefaultLayout --readWriteActions
+
+Desde <https://mycsharpdeveloper.wordpress.com/2020/04/22/how-to-scaffolding-asp-net-core-mvc-view-and-controller-in-visual-studio-code/> 
+
+
+Desde <https://learn.microsoft.com/en-us/ef/core/managing-schemas/scaffolding/?tabs=dotnet-core-cli> 
+
+
+dotnet ef dbcontext scaffold "Server=localhost;Initial catalog=HotelListingAPIDb;Trusted_Connection=True;TrustServerCertificate=True"  Microsoft.EntityFrameworkCore.SqlServer --Table Country 
+
+
+dotnet ef dbcontext scaffold ... --schema Customer --schema Contractor
+
+dotnet ef dbcontext scaffold  --schema Country 
+
+Dotnet ef aspnet-codegenerator controller -name CountriesController --relativeFolderPath Controllers--readWriteActions
+
+Desde <https://meet.google.com/zyb-tbuj-uvy> 
+
+
+
+
+dotnet ef  scaffold  controller -name CountriesController -actions -nv -m Country -dc ApplicationDbContext -outDir Controllers
+
+Desde <https://gavilanch.wordpress.com/2018/04/28/asp-net-core-2-haciendo-scaffolding-con-el-dotnet-cli-aspnet-codegenerator/> 
+
+dotnet aspnet-codegenerator controller -name CountriesController -async -api -m Country -dc HotelListingDbContext -outDir Controllers
+
+dotnet aspnet-codegenerator controller -name HotelsController -async -api -m Hotel -dc HotelListingDbContext -outDir Controllers
